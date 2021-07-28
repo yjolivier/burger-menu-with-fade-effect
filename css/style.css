@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  box-sizing: border-box;
+}
+
+.root {
+  width: 100vw;
+  height: 100vh;
+  background: brown;
+  display: flex;
+  justify-content: flex-end;
+}
+.root menu .menu_burger {
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  z-index: 100;
+}
+.root menu .menu_burger .menu-btn__burger {
+  position: relative;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.root menu .menu_burger .menu-btn__burger::before, .root menu .menu_burger .menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.root menu .menu_burger .menu-btn__burger::before {
+  transform: translateY(-10px);
+}
+.root menu .menu_burger .menu-btn__burger::after {
+  transform: translateY(10px);
+}
+.root menu nav.menu_nav {
+  width: 100vw;
+  height: 100vh;
+  background-color: #007aff;
+  display: flex;
+}
+.root menu nav.menu_nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 70px;
+}
+.root menu nav.menu_nav ul li {
+  list-style-type: none;
+  line-height: 50px;
+}
+.root menu nav.menu_nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+.root menu nav.menu_nav ul.menu_right {
+  list-style: none;
+  width: 70%;
+  background: #02123c;
+}
+.root menu nav.menu_nav ul.menu_right li a {
+  font-weight: 500;
+  opacity: 0.6;
+}
+.root menu nav.menu_nav ul.menu_right li a:hover {
+  border-left: 4px solid #51c8ff;
+  padding-left: 15px;
+}
+.root menu nav.menu_nav ul.menu_right li.menu_right-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #51c8ff;
+  margin-bottom: 25px;
+}
+.root menu nav.menu_nav ul.menu_left {
+  width: 30%;
+  background: #082873;
+}
+.root menu nav.menu_nav ul.menu_left li {
+  line-height: 60px;
+}
+.root menu nav.menu_nav ul.menu_left li a {
+  font-size: 2rem;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.8;
+}
+.root menu nav.menu_nav ul.menu_left li a:hover {
+  opacity: 1;
+}
+.root menu nav.menu_nav ul.menu_left li a:hover::after {
+  width: 35px;
+}
+.root menu nav.menu_nav ul.menu_left li a::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.root menu nav.menu_nav ul.menu_left li.menu_left-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  position: relative;
+}
+.root menu nav.menu_nav ul.menu_left li.menu_left-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 35px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+/*# sourceMappingURL=style.css.map */
