@@ -115,10 +115,13 @@
 			ul.menu_right{
 				list-style: none;
 				width: 70%;
+				margin-left: 30%;
 				background: transparent;
 				position: relative;
 				z-index: 200;
 				li{
+					opacity: 0;
+					transition: all .5s ease-in-out;
 					a{
 						font-weight: 500;
 						opacity: 0.6;
@@ -135,15 +138,22 @@
 					font-weight: 700;
 					color: #51c8ff;
 					margin-bottom: 25px;
+					margin-top: 200px;
+					transition: all 1s ease-in-out;
 				}
 			}
 			ul.menu_left{
-				width: 30%;
+				width: 0;
+				padding: 0;
 				background: #082873;
 				position: relative;
+				overflow: visible;
+				transform-origin: right;
+				transition: all .5s ease-in-out;
 				z-index: 200;
 				li{
 					line-height: 60px;
+					padding-left: 70px;
 					a{
 						font-size: 2rem;
 						position: relative;
@@ -178,7 +188,7 @@
 						content: '';
 						position: absolute;
 						bottom: -8px;
-						left: 0;
+						left: 70px;
 						width: 35px;
 						height: 3px;
 						background: #fff;
