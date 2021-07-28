@@ -16,12 +16,12 @@
 			margin-right: 15px;
 			width: 40px;
 			height: 40px;
-			border: 2px solid #fff;
+			// border: 2px solid #fff;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			// display: none;
 			position: absolute;
+			cursor: pointer;
 			right: 0;
 			z-index: 100;
 			.menu-btn__burger{
@@ -48,6 +48,18 @@
 				}
 				&::after{
 					transform: translateY(10px);
+				}
+			}
+			&.active{
+				.menu-btn__burger {
+					transform: translateX(-40px);
+					background: transparent;
+					&::before{
+						transform: rotate(45deg) translate(40px, -40px);
+					}
+					&::after{
+						transform: rotate(-45deg) translate(40px, 40px);
+					}
 				}
 			}
 		}
@@ -83,6 +95,7 @@
 						font-weight: 500;
 						opacity: 0.6;
 						&:hover{
+							opacity: 1;
 							border-left: 4px solid #51c8ff;
 							padding-left: 15px;
 						}
@@ -105,7 +118,7 @@
 						font-size: 2rem;
 						position: relative;
 						transition: all 0.2s ease-in-out;
-						opacity: 0.8;
+						opacity: 0.7;
 						&:hover{
 							opacity: 1;
 							&::after{
