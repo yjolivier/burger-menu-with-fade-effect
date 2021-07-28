@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+@keyframes cancelBorderRadius {
+  from {
+    border-radius: 50% 0 50% 50%;
+  }
+  to {
+    border-radius: 0%;
+  }
+}
 .root {
   width: 100vw;
   height: 100vh;
@@ -60,10 +68,17 @@
   transform: rotate(-45deg) translate(40px, 40px);
 }
 .root menu nav.menu_nav {
-  width: 100vw;
-  height: 100vh;
+  width: 0vw;
+  height: 0vh;
+  border-radius: 50% 0 50% 50%;
+  overflow: hidden;
   background-color: #007aff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
   display: flex;
+  transition: all 0.3s ease-in-out;
 }
 .root menu nav.menu_nav ul {
   list-style: none;
@@ -86,7 +101,9 @@
 .root menu nav.menu_nav ul.menu_right {
   list-style: none;
   width: 70%;
-  background: #02123c;
+  background: transparent;
+  position: relative;
+  z-index: 200;
 }
 .root menu nav.menu_nav ul.menu_right li a {
   font-weight: 500;
@@ -106,6 +123,8 @@
 .root menu nav.menu_nav ul.menu_left {
   width: 30%;
   background: #082873;
+  position: relative;
+  z-index: 200;
 }
 .root menu nav.menu_nav ul.menu_left li {
   line-height: 60px;
@@ -149,6 +168,25 @@
   height: 3px;
   background: #fff;
   transition: all 0.2s ease-in-out;
+}
+.root menu nav.menu_nav.active {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  animation-iteration-count: 1;
+  animation-delay: 3s;
+  animation-name: cancelBorderRadius;
+}
+.root menu nav.menu_nav.active::before {
+  content: "";
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  background: #02123c;
+  width: 500px;
+  height: 500px;
 }
 
 /*# sourceMappingURL=style.css.map */
