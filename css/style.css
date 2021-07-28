@@ -70,15 +70,27 @@
 .root menu nav.menu_nav {
   width: 0vw;
   height: 0vh;
-  border-radius: 50% 0 50% 50%;
   overflow: hidden;
-  background-color: #007aff;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 10;
   display: flex;
-  transition: all 0.3s ease-in-out;
+}
+.root menu nav.menu_nav::before {
+  content: "";
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  border-radius: 50% 0 50% 50%;
+  background: #02123c;
+  width: 500px;
+  height: 500px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0);
+  transform-origin: top right;
 }
 .root menu nav.menu_nav ul {
   list-style: none;
@@ -132,8 +144,8 @@
 .root menu nav.menu_nav ul.menu_left li a {
   font-size: 2rem;
   position: relative;
-  transition: all 0.2s ease-in-out;
   opacity: 0.7;
+  transition: all 0.3s ease-in-out;
 }
 .root menu nav.menu_nav ul.menu_left li a:hover {
   opacity: 1;
@@ -149,7 +161,7 @@
   width: 0px;
   height: 3px;
   background: #fff;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .root menu nav.menu_nav ul.menu_left li.menu_left-title {
   font-size: 2.5rem;
@@ -167,26 +179,14 @@
   width: 35px;
   height: 3px;
   background: #fff;
-  transition: all 0.2s ease-in-out;
 }
 .root menu nav.menu_nav.active {
   width: 100vw;
   height: 100vh;
-  border-radius: 0;
-  animation-iteration-count: 1;
-  animation-delay: 3s;
-  animation-name: cancelBorderRadius;
 }
 .root menu nav.menu_nav.active::before {
-  content: "";
-  position: absolute;
-  z-index: 9;
-  top: 0;
-  right: 0;
-  border-radius: 50%;
-  background: #02123c;
-  width: 500px;
-  height: 500px;
+  opacity: 1;
+  transform: scale(6);
 }
 
 /*# sourceMappingURL=style.css.map */
