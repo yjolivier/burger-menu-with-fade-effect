@@ -45,3 +45,21 @@ menuBtn.addEventListener('click', () => {
         menuContentCardLeftBefore.removeAttribute('style');
     }
 })
+
+
+/**
+ * Tab script 
+ */
+
+const tabLinks = document.querySelectorAll('.tab-nav .menu_left li a');
+function changeTab(){
+    for(let i = 0; i < tabLinks.length; i++) {
+        
+        let link = tabLinks[i].getAttribute('href');
+        let tabContent = document.getElementById(link.substr(1, link.length));
+        tabLinks[i].parentNode.classList.add('active');
+        tabContent.classList('active');
+    }
+}
+changeTab();
+// console.log(tabLinks);

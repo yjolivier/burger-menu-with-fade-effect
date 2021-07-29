@@ -77,6 +77,9 @@
   z-index: 10;
   display: flex;
 }
+.root menu nav.menu_nav .tab-container {
+  width: 70%;
+}
 .root menu nav.menu_nav::before {
   content: "";
   position: absolute;
@@ -116,6 +119,7 @@
   background: transparent;
   position: relative;
   z-index: 200;
+  height: 100%;
 }
 .root menu nav.menu_nav ul.menu_right li {
   opacity: 0;
@@ -149,7 +153,7 @@
   line-height: 60px;
   padding-left: 70px;
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position: relative;
   z-index: 201;
 }
@@ -176,23 +180,23 @@
   transition: all 0.3s ease-in-out;
 }
 .root menu nav.menu_nav ul.menu_left li.menu_left-title {
+  margin-top: 200px;
+  transition: all 1s ease-in-out;
+}
+.root menu nav.menu_nav ul.menu_left li.menu_left-title a {
+  text-decoration: none;
   font-size: 2.5rem;
   font-weight: 800;
   color: #fff;
   margin-bottom: 25px;
   text-transform: uppercase;
   position: relative;
-  margin-top: 200px;
   transition: all 1s ease-in-out;
+  cursor: pointer;
+  opacity: 0.7;
 }
-.root menu nav.menu_nav ul.menu_left li.menu_left-title::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 70px;
-  width: 35px;
-  height: 3px;
-  background: #fff;
+.root menu nav.menu_nav ul.menu_left li.menu_left-title:hover a {
+  opacity: 1;
 }
 .root menu nav.menu_nav ul.menu_left .menu_left_befor {
   position: absolute;

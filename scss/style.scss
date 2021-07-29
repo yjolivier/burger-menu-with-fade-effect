@@ -78,6 +78,9 @@
 			right: 0;
 			z-index: 10;
 			display: flex;
+			.tab-container{
+				width: 70%;
+			}
 			&::before{
 				content: '';
 				position: absolute;
@@ -117,6 +120,7 @@
 				background: transparent;
 				position: relative;
 				z-index: 200;
+				height: 100%;
 				li{
 					opacity: 0;
 					transition: all .5s ease-in-out;
@@ -150,7 +154,7 @@
 					line-height: 60px;
 					padding-left: 70px;
 					opacity: 0;
-					transition: all .5s ease-in-out;
+					transition: all .3s ease-in-out;
 					position: relative;
 					z-index: 201;
 					a{
@@ -177,22 +181,24 @@
 					}
 				}
 				li.menu_left-title{
-					font-size: 2.5rem;
-					font-weight: 800;
-					color: #fff;
-					margin-bottom: 25px;
-					text-transform: uppercase;
-					position: relative;
 					margin-top: 200px;
 					transition: all 1s ease-in-out;
-					&::after{
-						content: '';
-						position: absolute;
-						bottom: -8px;
-						left: 70px;
-						width: 35px;
-						height: 3px;
-						background: #fff;
+					a{
+						text-decoration: none;
+						font-size: 2.5rem;
+						font-weight: 800;
+						color: #fff;
+						margin-bottom: 25px;
+						text-transform: uppercase;
+						position: relative;
+						transition: all 1s ease-in-out;
+						cursor: pointer;
+						opacity: 0.7;
+					}
+					&:hover{
+						a{
+							opacity: 1;
+						}
 					}
 				}
 				& .menu_left_befor{
@@ -217,5 +223,6 @@
 				}
 			}
 		}
+
 	}
 }
