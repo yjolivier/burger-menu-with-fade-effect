@@ -115,7 +115,6 @@
 			ul.menu_right{
 				list-style: none;
 				width: 70%;
-				margin-left: 30%;
 				background: transparent;
 				position: relative;
 				z-index: 200;
@@ -143,22 +142,23 @@
 				}
 			}
 			ul.menu_left{
-				width: 0;
+				width: 30%;
 				padding: 0;
-				background: #082873;
 				position: relative;
 				overflow: visible;
-				transform-origin: right;
-				transition: all .5s ease-in-out;
 				z-index: 200;
 				li{
 					line-height: 60px;
 					padding-left: 70px;
+					opacity: 0;
+					transition: all .5s ease-in-out;
+					position: relative;
+					z-index: 201;
 					a{
 						font-size: 2rem;
-						position: relative;
 						opacity: 0.7;
 						transition: all .3s ease-in-out;
+						position: relative;
 						&:hover{
 							opacity: 1;
 							&::after{
@@ -169,7 +169,7 @@
 							content: '';
 							position: absolute;
 							bottom: -10px;
-							left: 0;
+							left: 0px;
 							width: 0px;
 							height: 3px;
 							background: #fff;
@@ -184,6 +184,8 @@
 					margin-bottom: 25px;
 					text-transform: uppercase;
 					position: relative;
+					margin-top: 200px;
+					transition: all 1s ease-in-out;
 					&::after{
 						content: '';
 						position: absolute;
@@ -193,6 +195,17 @@
 						height: 3px;
 						background: #fff;
 					}
+				}
+				& .menu_left_befor{
+					position: absolute;
+					z-index: 100;
+					width: 0%;
+					height: 100%;
+					top: 0;
+					right: 0;
+					background: #082873;
+					transition: all .2s ease-in-out;
+					transform-origin: right;
 				}
 			}
 			&.active{
